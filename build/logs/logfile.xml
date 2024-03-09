@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="57" assertions="100" errors="0" warnings="0" failures="0" skipped="0" time="3.325688">
+    <testsuite name="App" tests="57" assertions="100" errors="0" warnings="0" failures="0" skipped="0" time="3.325688">
+      <testsuite name="Tests\Feature\Books\DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/DeleteTest.php" tests="3" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.235126">
+        <testcase name="test_success" class="Tests\Feature\Books\DeleteTest" classname="Tests.Feature.Books.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/DeleteTest.php" line="32" assertions="2" time="0.117070"/>
+        <testcase name="test_no_delete_is_no_available" class="Tests\Feature\Books\DeleteTest" classname="Tests.Feature.Books.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/DeleteTest.php" line="55" assertions="4" time="0.065535"/>
+        <testcase name="test_error_id_no_exist" class="Tests\Feature\Books\DeleteTest" classname="Tests.Feature.Books.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/DeleteTest.php" line="84" assertions="2" time="0.052520"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Books\GetTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/GetTest.php" tests="1" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.064684">
+        <testcase name="test_only_is_available_success" class="Tests\Feature\Books\GetTest" classname="Tests.Feature.Books.GetTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/GetTest.php" line="32" assertions="3" time="0.064684"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Books\PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" tests="8" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.454706">
+        <testcase name="test_success" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="30" assertions="4" time="0.060552"/>
+        <testcase name="test_error_name_text" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="64" assertions="1" time="0.058081"/>
+        <testcase name="test_error_author_text" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="82" assertions="1" time="0.053936"/>
+        <testcase name="test_error_name_empty" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="100" assertions="1" time="0.056784"/>
+        <testcase name="test_error_author_empty" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="117" assertions="1" time="0.055148"/>
+        <testcase name="test_error_categories_empty" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="134" assertions="1" time="0.052943"/>
+        <testcase name="test_error_categories_min_1" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="145" assertions="1" time="0.057868"/>
+        <testcase name="test_error_categories_no_exist" class="Tests\Feature\Books\PostTest" classname="Tests.Feature.Books.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php" line="157" assertions="1" time="0.059395"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Books\PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" tests="8" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.519429">
+        <testcase name="test_success_name_author" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="32" assertions="5" time="0.067212"/>
+        <testcase name="test_success_categories" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="76" assertions="5" time="0.103859"/>
+        <testcase name="test_error_author_text" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="123" assertions="1" time="0.059954"/>
+        <testcase name="test_error_name_empty" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="144" assertions="1" time="0.061459"/>
+        <testcase name="test_error_author_empty" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="164" assertions="1" time="0.059395"/>
+        <testcase name="test_error_categories_empty" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="184" assertions="1" time="0.056876"/>
+        <testcase name="test_error_categories_min_1" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="198" assertions="1" time="0.056299"/>
+        <testcase name="test_error_categories_no_exist" class="Tests\Feature\Books\PutTest" classname="Tests.Feature.Books.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PutTest.php" line="213" assertions="1" time="0.054375"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Books\ShowTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/ShowTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.073461">
+        <testcase name="test_success" class="Tests\Feature\Books\ShowTest" classname="Tests.Feature.Books.ShowTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/ShowTest.php" line="32" assertions="2" time="0.073461"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Categories\DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/DeleteTest.php" tests="3" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.184923">
+        <testcase name="test_success" class="Tests\Feature\Categories\DeleteTest" classname="Tests.Feature.Categories.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/DeleteTest.php" line="32" assertions="2" time="0.059715"/>
+        <testcase name="test_no_delete_book_is_no_available" class="Tests\Feature\Categories\DeleteTest" classname="Tests.Feature.Categories.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/DeleteTest.php" line="47" assertions="4" time="0.063412"/>
+        <testcase name="test_error" class="Tests\Feature\Categories\DeleteTest" classname="Tests.Feature.Categories.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/DeleteTest.php" line="76" assertions="1" time="0.061796"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Categories\GetTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/GetTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.063614">
+        <testcase name="test_success" class="Tests\Feature\Categories\GetTest" classname="Tests.Feature.Categories.GetTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/GetTest.php" line="30" assertions="1" time="0.063614"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Categories\PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PostTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.164287">
+        <testcase name="test_success" class="Tests\Feature\Categories\PostTest" classname="Tests.Feature.Categories.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PostTest.php" line="30" assertions="2" time="0.055453"/>
+        <testcase name="test_error_name_text" class="Tests\Feature\Categories\PostTest" classname="Tests.Feature.Categories.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PostTest.php" line="44" assertions="1" time="0.052156"/>
+        <testcase name="test_error_name_empty" class="Tests\Feature\Categories\PostTest" classname="Tests.Feature.Categories.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PostTest.php" line="55" assertions="1" time="0.056677"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Categories\PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PutTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.166527">
+        <testcase name="test_success" class="Tests\Feature\Categories\PutTest" classname="Tests.Feature.Categories.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PutTest.php" line="30" assertions="2" time="0.055319"/>
+        <testcase name="test_error_name_text" class="Tests\Feature\Categories\PutTest" classname="Tests.Feature.Categories.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PutTest.php" line="47" assertions="1" time="0.053951"/>
+        <testcase name="test_error_name_empty" class="Tests\Feature\Categories\PutTest" classname="Tests.Feature.Categories.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Categories/PutTest.php" line="61" assertions="1" time="0.057258"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\BorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php" tests="3" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.213937">
+        <testcase name="test_success" class="Tests\Feature\Users\BorrowedBookTest" classname="Tests.Feature.Users.BorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php" line="34" assertions="3" time="0.091984"/>
+        <testcase name="test_no_borrowed_book_is_no_available" class="Tests\Feature\Users\BorrowedBookTest" classname="Tests.Feature.Users.BorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php" line="66" assertions="4" time="0.067754"/>
+        <testcase name="test_book_no_exists" class="Tests\Feature\Users\BorrowedBookTest" classname="Tests.Feature.Users.BorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php" line="103" assertions="2" time="0.054198"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/DeleteTest.php" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.114957">
+        <testcase name="test_success" class="Tests\Feature\Users\DeleteTest" classname="Tests.Feature.Users.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/DeleteTest.php" line="30" assertions="2" time="0.064104"/>
+        <testcase name="test_user_error" class="Tests\Feature\Users\DeleteTest" classname="Tests.Feature.Users.DeleteTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/DeleteTest.php" line="45" assertions="2" time="0.050853"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\GetBackBorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/GetBackBorrowedBookTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.133273">
+        <testcase name="test_success" class="Tests\Feature\Users\GetBackBorrowedBookTest" classname="Tests.Feature.Users.GetBackBorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/GetBackBorrowedBookTest.php" line="34" assertions="3" time="0.075314"/>
+        <testcase name="test_book_no_exists" class="Tests\Feature\Users\GetBackBorrowedBookTest" classname="Tests.Feature.Users.GetBackBorrowedBookTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/GetBackBorrowedBookTest.php" line="70" assertions="2" time="0.057959"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\GetTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/GetTest.php" tests="1" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.063533">
+        <testcase name="test_success" class="Tests\Feature\Users\GetTest" classname="Tests.Feature.Users.GetTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/GetTest.php" line="32" assertions="3" time="0.063533"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" tests="6" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.338710">
+        <testcase name="test_success" class="Tests\Feature\Users\PostTest" classname="Tests.Feature.Users.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" line="30" assertions="2" time="0.057052"/>
+        <testcase name="test_error_name_text" class="Tests\Feature\Users\PostTest" classname="Tests.Feature.Users.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" line="44" assertions="1" time="0.049186"/>
+        <testcase name="test_error_email_no_valid" class="Tests\Feature\Users\PostTest" classname="Tests.Feature.Users.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" line="55" assertions="1" time="0.050767"/>
+        <testcase name="test_error_email_unique" class="Tests\Feature\Users\PostTest" classname="Tests.Feature.Users.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" line="66" assertions="1" time="0.066389"/>
+        <testcase name="test_error_name_empty" class="Tests\Feature\Users\PostTest" classname="Tests.Feature.Users.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" line="80" assertions="1" time="0.063529"/>
+        <testcase name="test_error_email_empty" class="Tests\Feature\Users\PostTest" classname="Tests.Feature.Users.PostTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PostTest.php" line="93" assertions="1" time="0.051788"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" tests="6" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.348459">
+        <testcase name="test_success" class="Tests\Feature\Users\PutTest" classname="Tests.Feature.Users.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" line="30" assertions="2" time="0.060084"/>
+        <testcase name="test_error_name_text" class="Tests\Feature\Users\PutTest" classname="Tests.Feature.Users.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" line="47" assertions="1" time="0.053212"/>
+        <testcase name="test_error_email_no_valid" class="Tests\Feature\Users\PutTest" classname="Tests.Feature.Users.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" line="61" assertions="1" time="0.060681"/>
+        <testcase name="test_error_email_unique" class="Tests\Feature\Users\PutTest" classname="Tests.Feature.Users.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" line="75" assertions="1" time="0.068955"/>
+        <testcase name="test_error_name_empty" class="Tests\Feature\Users\PutTest" classname="Tests.Feature.Users.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" line="90" assertions="1" time="0.053858"/>
+        <testcase name="test_error_email_empty" class="Tests\Feature\Users\PutTest" classname="Tests.Feature.Users.PutTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php" line="103" assertions="1" time="0.051669"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Users\ShowTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/ShowTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.077505">
+        <testcase name="test_success" class="Tests\Feature\Users\ShowTest" classname="Tests.Feature.Users.ShowTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/ShowTest.php" line="32" assertions="2" time="0.077505"/>
+      </testsuite>
+      <testsuite name="ExampleDatabaseTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/database/ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.105736">
+        <testcase name="testModelFindAll" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/database/ExampleDatabaseTest.php" line="17" assertions="1" time="0.054146"/>
+        <testcase name="testSoftDeleteLeavesRow" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/database/ExampleDatabaseTest.php" line="28" assertions="2" time="0.051590"/>
+      </testsuite>
+      <testsuite name="ExampleSessionTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/session/ExampleSessionTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000794">
+        <testcase name="testSessionSimple" class="ExampleSessionTest" classname="ExampleSessionTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/session/ExampleSessionTest.php" line="11" assertions="1" time="0.000794"/>
+      </testsuite>
+      <testsuite name="HealthTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/unit/HealthTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.002027">
+        <testcase name="testIsDefinedAppPath" class="HealthTest" classname="HealthTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/unit/HealthTest.php" line="13" assertions="1" time="0.000701"/>
+        <testcase name="testBaseUrlHasBeenSet" class="HealthTest" classname="HealthTest" file="/var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/unit/HealthTest.php" line="18" assertions="2" time="0.001326"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

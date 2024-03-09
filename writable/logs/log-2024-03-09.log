@@ -1,0 +1,705 @@
+ERROR - 2024-03-09 00:33:30 --> mysqli_sql_exception: Unknown column 'description' in 'where clause' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/Constraints/SeeInDatabase.php(55): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php(46): CodeIgniter\Test\Constraints\SeeInDatabase->matches('books')
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/Assert.php(2438): PHPUnit\Framework\Constraint\Constraint->evaluate('books', '')
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(280): PHPUnit\Framework\Assert::assertThat('books', Object(CodeIgniter\Test\Constraints\SeeInDatabase))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(46): Tests\Feature\Books\PostTest->seeInDatabase('books', Array)
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Books\PostTest->test_success()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#19 {main}
+ERROR - 2024-03-09 00:43:39 --> mysqli_sql_exception: Invalid default value for 'published_at' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/_support/Database/Migrations/2024-03-08-182037_CreateBooksTable.php(42): CodeIgniter\Database\Forge->createTable('books')
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateBooksTable->up()
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(160): CodeIgniter\Database\MigrationRunner->latest('tests')
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(109): Tests\Feature\Books\PostTest->migrateDatabase()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(55): Tests\Feature\Books\PostTest->setUpMigrate()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/CIUnitTestCase.php(249): Tests\Feature\Books\PostTest->setUpDatabase()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(23): CodeIgniter\Test\CIUnitTestCase->setUp()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1211): Tests\Feature\Books\PostTest->setUp()
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#21 {main}
+ERROR - 2024-03-09 00:43:39 --> mysqli_sql_exception: Invalid default value for 'published_at' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/_support/Database/Migrations/2024-03-08-182037_CreateBooksTable.php(42): CodeIgniter\Database\Forge->createTable('books')
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateBooksTable->up()
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(160): CodeIgniter\Database\MigrationRunner->latest('tests')
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(109): Tests\Feature\Books\PostTest->migrateDatabase()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(55): Tests\Feature\Books\PostTest->setUpMigrate()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/CIUnitTestCase.php(249): Tests\Feature\Books\PostTest->setUpDatabase()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(23): CodeIgniter\Test\CIUnitTestCase->setUp()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1211): Tests\Feature\Books\PostTest->setUp()
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#21 {main}
+ERROR - 2024-03-09 00:43:39 --> mysqli_sql_exception: Invalid default value for 'published_at' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/_support/Database/Migrations/2024-03-08-182037_CreateBooksTable.php(42): CodeIgniter\Database\Forge->createTable('books')
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateBooksTable->up()
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(160): CodeIgniter\Database\MigrationRunner->latest('tests')
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(109): Tests\Feature\Books\PostTest->migrateDatabase()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(55): Tests\Feature\Books\PostTest->setUpMigrate()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/CIUnitTestCase.php(249): Tests\Feature\Books\PostTest->setUpDatabase()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(23): CodeIgniter\Test\CIUnitTestCase->setUp()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1211): Tests\Feature\Books\PostTest->setUp()
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#21 {main}
+ERROR - 2024-03-09 00:43:56 --> mysqli_sql_exception: Invalid default value for 'published_at' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/_support/Database/Migrations/2024-03-08-182037_CreateBooksTable.php(41): CodeIgniter\Database\Forge->createTable('books')
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateBooksTable->up()
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(160): CodeIgniter\Database\MigrationRunner->latest('tests')
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(109): Tests\Feature\Books\PostTest->migrateDatabase()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(55): Tests\Feature\Books\PostTest->setUpMigrate()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/CIUnitTestCase.php(249): Tests\Feature\Books\PostTest->setUpDatabase()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(23): CodeIgniter\Test\CIUnitTestCase->setUp()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1211): Tests\Feature\Books\PostTest->setUp()
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#21 {main}
+ERROR - 2024-03-09 00:43:56 --> mysqli_sql_exception: Invalid default value for 'published_at' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/_support/Database/Migrations/2024-03-08-182037_CreateBooksTable.php(41): CodeIgniter\Database\Forge->createTable('books')
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateBooksTable->up()
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(160): CodeIgniter\Database\MigrationRunner->latest('tests')
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(109): Tests\Feature\Books\PostTest->migrateDatabase()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(55): Tests\Feature\Books\PostTest->setUpMigrate()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/CIUnitTestCase.php(249): Tests\Feature\Books\PostTest->setUpDatabase()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(23): CodeIgniter\Test\CIUnitTestCase->setUp()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1211): Tests\Feature\Books\PostTest->setUp()
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#21 {main}
+ERROR - 2024-03-09 00:43:56 --> mysqli_sql_exception: Invalid default value for 'published_at' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('CREATE TABLE `b...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `b...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `b...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `b...')
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/_support/Database/Migrations/2024-03-08-182037_CreateBooksTable.php(41): CodeIgniter\Database\Forge->createTable('books')
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(865): App\Database\Migrations\CreateBooksTable->up()
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(160): CodeIgniter\Database\MigrationRunner->latest('tests')
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(109): Tests\Feature\Books\PostTest->migrateDatabase()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(55): Tests\Feature\Books\PostTest->setUpMigrate()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/CIUnitTestCase.php(249): Tests\Feature\Books\PostTest->setUpDatabase()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(23): CodeIgniter\Test\CIUnitTestCase->setUp()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1211): Tests\Feature\Books\PostTest->setUp()
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#21 {main}
+ERROR - 2024-03-09 02:23:44 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`test`.`users_books`, CONSTRAINT `users_books_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`)) in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(133): CodeIgniter\Model->insert(Array)
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->borrowedBook('1')
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(Object(CodeIgniter\Router\RouteCollection), Object(Config\Cache), true)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(179): CodeIgniter\CodeIgniter->run(Object(CodeIgniter\Router\RouteCollection), true)
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(212): Tests\Feature\Users\BorrowedBookTest->call('post', '/api/v1/users/1...', Array)
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php(49): Tests\Feature\Users\BorrowedBookTest->post('/api/v1/users/1...', Array)
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Users\BorrowedBookTest->test_success()
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Users\BorrowedBookTest))
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#21 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#22 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#23 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#24 {main}
+ERROR - 2024-03-09 02:24:15 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`test`.`users_books`, CONSTRAINT `users_books_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`)) in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(133): CodeIgniter\Model->insert(Array)
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->borrowedBook('1')
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(Object(CodeIgniter\Router\RouteCollection), Object(Config\Cache), true)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(179): CodeIgniter\CodeIgniter->run(Object(CodeIgniter\Router\RouteCollection), true)
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(212): Tests\Feature\Users\BorrowedBookTest->call('post', '/api/v1/users/1...', Array)
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php(49): Tests\Feature\Users\BorrowedBookTest->post('/api/v1/users/1...', Array)
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Users\BorrowedBookTest->test_success()
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Users\BorrowedBookTest))
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#21 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#22 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#23 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#24 {main}
+ERROR - 2024-03-09 02:24:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`test`.`users_books`, CONSTRAINT `users_books_book_id_foreign` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`)) in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(133): CodeIgniter\Model->insert(Array)
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->borrowedBook('1')
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(Object(CodeIgniter\Router\RouteCollection), Object(Config\Cache), true)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(179): CodeIgniter\CodeIgniter->run(Object(CodeIgniter\Router\RouteCollection), true)
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(212): Tests\Feature\Users\BorrowedBookTest->call('post', '/api/v1/users/1...', Array)
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php(49): Tests\Feature\Users\BorrowedBookTest->post('/api/v1/users/1...', Array)
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Users\BorrowedBookTest->test_success()
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Users\BorrowedBookTest))
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#21 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#22 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#23 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#24 {main}
+ERROR - 2024-03-09 02:27:31 --> mysqli_sql_exception: Table 'test.book' doesn't exist in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Validation/StrictRules/Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Validation/Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('1', 'id', Array, NULL, 'book_id')
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Validation/Validation.php(200): CodeIgniter\Validation\Validation->processRules('book_id', 'campo identific...', '1', Array, Array)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(118): CodeIgniter\Controller->validate(Array)
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->borrowedBook('1')
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(Object(CodeIgniter\Router\RouteCollection), Object(Config\Cache), true)
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(179): CodeIgniter\CodeIgniter->run(Object(CodeIgniter\Router\RouteCollection), true)
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(212): Tests\Feature\Users\BorrowedBookTest->call('post', '/api/v1/users/1...', Array)
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php(49): Tests\Feature\Users\BorrowedBookTest->post('/api/v1/users/1...', Array)
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Users\BorrowedBookTest->test_success()
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Users\BorrowedBookTest))
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#22 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#23 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#24 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#25 {main}
+ERROR - 2024-03-09 02:31:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`test`.`categories_books`, CONSTRAINT `categories_books_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)) in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Books.php(94): CodeIgniter\Model->insert(Array)
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Books->store()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Books))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(Object(CodeIgniter\Router\RouteCollection), Object(Config\Cache), true)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(179): CodeIgniter\CodeIgniter->run(Object(CodeIgniter\Router\RouteCollection), true)
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(212): Tests\Feature\Books\PostTest->call('post', '/api/v1/books', Array)
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Books/PostTest.php(158): Tests\Feature\Books\PostTest->post('/api/v1/books', Array)
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Books\PostTest->test_error_categories_no_exist()
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Books\PostTest))
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#22 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#23 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#24 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#25 {main}
+ERROR - 2024-03-09 02:41:33 --> mysqli_sql_exception: Table 'test.users_book' doesn't exist in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/Constraints/SeeInDatabase.php(55): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php(46): CodeIgniter\Test\Constraints\SeeInDatabase->matches('users_book')
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/Assert.php(2438): PHPUnit\Framework\Constraint\Constraint->evaluate('users_book', '')
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/DatabaseTestTrait.php(280): PHPUnit\Framework\Assert::assertThat('users_book', Object(CodeIgniter\Test\Constraints\SeeInDatabase))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/BorrowedBookTest.php(55): Tests\Feature\Users\BorrowedBookTest->seeInDatabase('users_book', Array)
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Users\BorrowedBookTest->test_success()
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Users\BorrowedBookTest))
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#19 {main}
+ERROR - 2024-03-09 03:00:34 --> mysqli_sql_exception: Unknown column 'books.is_available' in 'field list' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('SELECT `categor...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Books.php(37): CodeIgniter\BaseModel->findAll()
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Books->index()
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Books))
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-09 03:00:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'books.is_available' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = :books.is_available:
+AND `books`.`deleted_at` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Books.php(37): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Books->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Books))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:00:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'books.is_available' in 'field list'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = 1
+AND `books`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = 1
+AND `books`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = :books.is_available:
+AND `books`.`deleted_at` IS NULL', [...], false)
+ 4 SYSTEMPATH/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH/Controllers/Books.php(37): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Books->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Books))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:00:34 --> [Caused by] mysqli_sql_exception: Unknown column 'books.is_available' in 'field list'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(306): mysqli->query('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = 1
+AND `books`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = 1
+AND `books`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = 1
+AND `books`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `categories`.`id` as `categoryId`, `categories`.`description`, `categories`.`created_at` as `categoryCreatedAt`, `categories`.`updated_at` as `categoryUpdatedAt`, `books`.`id` as `bookId`, `books`.`name`, `books`.`author`, `books`.`published_at`, `books`.`is_available`, `books`.`created_at` as `bookCreatedAt`, `books`.`updated_at` as `bookUpdatedAt`
+FROM `books`
+JOIN `categories_books` ON `categories_books`.`book_id` = `books`.`id`
+JOIN `categories` ON `categories_books`.`category_id` = `categories`.`id`
+WHERE `books`.`is_available` = :books.is_available:
+AND `books`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Books.php(37): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Books->index()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Books))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:00:57 --> ErrorException: Cannot use empty array elements in arrays
+in APPPATH/Database/Migrations/2024-03-08-182037_CreateBooksTable.php on line 26.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-09 03:01:12 --> ErrorException: Cannot use empty array elements in arrays
+in APPPATH/Database/Migrations/2024-03-08-182037_CreateBooksTable.php on line 26.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-03-09 03:20:32 --> mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->store()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-09 03:20:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:20:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:32\', \'2024-03-09 03:20:32\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:32\', \'2024-03-09 03:20:32\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 8 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:20:32 --> [Caused by] mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:32\', \'2024-03-09 03:20:32\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:32\', \'2024-03-09 03:20:32\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:32\', \'2024-03-09 03:20:32\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 9 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+10 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-09 03:20:34 --> mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->store()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-09 03:20:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:20:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:34\', \'2024-03-09 03:20:34\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:34\', \'2024-03-09 03:20:34\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 8 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:20:34 --> [Caused by] mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:34\', \'2024-03-09 03:20:34\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:34\', \'2024-03-09 03:20:34\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:34\', \'2024-03-09 03:20:34\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 9 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+10 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-09 03:20:39 --> mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->store()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-09 03:20:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:20:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:39\', \'2024-03-09 03:20:39\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:39\', \'2024-03-09 03:20:39\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 8 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:20:39 --> [Caused by] mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:39\', \'2024-03-09 03:20:39\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:39\', \'2024-03-09 03:20:39\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:20:39\', \'2024-03-09 03:20:39\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 9 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+10 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-09 03:22:17 --> mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->store()
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-09 03:22:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:22:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:22:17\', \'2024-03-09 03:22:17\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:22:17\', \'2024-03-09 03:22:17\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 8 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+ 9 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 03:22:17 --> [Caused by] mysqli_sql_exception: Duplicate entry 'ubaldo@gmail.com' for key 'email'
+in SYSTEMPATH/Database/mysqli/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/mysqli/Connection.php(306): mysqli->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:22:17\', \'2024-03-09 03:22:17\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:22:17\', \'2024-03-09 03:22:17\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (\'Ubaldo Diaz\', \'ubaldo@gmail.com\', \'2024-03-09 03:22:17\', \'2024-03-09 03:22:17\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (:name:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Users.php(66): CodeIgniter\Model->insert(Object(stdClass))
+ 9 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->store()
+10 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-09 03:35:55 --> mysqli_sql_exception: Duplicate entry 'ebaumbach@hotmail.com' for key 'email' in /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php:306
+Stack trace:
+#0 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/mysqli/Connection.php(306): mysqli->query('UPDATE `users` ...', 0)
+#1 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(393): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/BaseModel.php(987): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Model.php(807): CodeIgniter\BaseModel->update(Array, Array)
+#7 /var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php(93): CodeIgniter\Model->update('1', Object(stdClass))
+#8 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(941): App\Controllers\Users->update('1')
+#9 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(Object(CodeIgniter\Router\RouteCollection), Object(Config\Cache), true)
+#11 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(179): CodeIgniter\CodeIgniter->run(Object(CodeIgniter\Router\RouteCollection), true)
+#12 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/codeigniter4/framework/system/Test/FeatureTestTrait.php(225): Tests\Feature\Users\PutTest->call('put', '/api/v1/users/1', Array)
+#13 /var/www/vhosts/ubaldodiaznunez/back/niwviu/tests/Features/Users/PutTest.php(81): Tests\Feature\Users\PutTest->put('/api/v1/users/1', Array)
+#14 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1612): Tests\Feature\Users\PutTest->test_error_email_unique()
+#15 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(1218): PHPUnit\Framework\TestCase->runTest()
+#16 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestResult.php(728): PHPUnit\Framework\TestCase->runBare()
+#17 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestCase.php(968): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\Users\PutTest))
+#18 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#19 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#20 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/Framework/TestSuite.php(684): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#21 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#22 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(145): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+#23 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/src/TextUI/Command.php(98): PHPUnit\TextUI\Command->run(Array, true)
+#24 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#25 /var/www/vhosts/ubaldodiaznunez/back/niwviu/vendor/bin/phpunit(122): include('/var/www/vhosts...')
+#26 {main}
+CRITICAL - 2024-03-09 06:15:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/borrowedBook.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/borrowedBook.php')
+ 2 SYSTEMPATH/Router/RouteCollection.php(1117): CodeIgniter\View\View->render('/borrowedBook', null)
+ 3 SYSTEMPATH/CodeIgniter.php(890): CodeIgniter\Router\RouteCollection::CodeIgniter\Router\{closure}()
+ 4 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 06:22:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/borrowedBook.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/borrowedBook.php')
+ 2 SYSTEMPATH/Router/RouteCollection.php(1117): CodeIgniter\View\View->render('/borrowedBook', null)
+ 3 SYSTEMPATH/CodeIgniter.php(890): CodeIgniter\Router\RouteCollection::CodeIgniter\Router\{closure}()
+ 4 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 08:13:52 --> ErrorException: Undefined property: stdClass::$book_id
+in APPPATH/Controllers/Users.php on line 209.
+ 1 APPPATH/Controllers/Users.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$book_id', '/var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php', 209)
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->getBackBorrowedBook('2')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 08:29:22 --> ErrorException: Undefined property: stdClass::$books
+in APPPATH/Controllers/Users.php on line 152.
+ 1 APPPATH/Controllers/Users.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$books', '/var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php', 152)
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->delete('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 08:30:02 --> ErrorException: Undefined property: stdClass::$books
+in APPPATH/Controllers/Users.php on line 152.
+ 1 APPPATH/Controllers/Users.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$books', '/var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php', 152)
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->delete('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 08:30:38 --> ErrorException: Undefined property: stdClass::$books
+in APPPATH/Controllers/Users.php on line 152.
+ 1 APPPATH/Controllers/Users.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$books', '/var/www/vhosts/ubaldodiaznunez/back/niwviu/app/Controllers/Users.php', 152)
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Users->delete('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

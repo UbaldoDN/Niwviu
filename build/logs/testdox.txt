@@ -1,0 +1,95 @@
+Delete (Tests\Feature\Books\Delete)
+ [x] Success
+ [x] No delete is no available
+ [x] Error id no exist
+
+Get (Tests\Feature\Books\Get)
+ [x] Only is available success
+
+Post (Tests\Feature\Books\Post)
+ [x] Success
+ [x] Error name text
+ [x] Error author text
+ [x] Error name empty
+ [x] Error author empty
+ [x] Error categories empty
+ [x] Error categories min 1
+ [x] Error categories no exist
+
+Put (Tests\Feature\Books\Put)
+ [x] Success name author
+ [x] Success categories
+ [x] Error author text
+ [x] Error name empty
+ [x] Error author empty
+ [x] Error categories empty
+ [x] Error categories min 1
+ [x] Error categories no exist
+
+Show (Tests\Feature\Books\Show)
+ [x] Success
+
+Delete (Tests\Feature\Categories\Delete)
+ [x] Success
+ [x] No delete book is no available
+ [x] Error
+
+Get (Tests\Feature\Categories\Get)
+ [x] Success
+
+Post (Tests\Feature\Categories\Post)
+ [x] Success
+ [x] Error name text
+ [x] Error name empty
+
+Put (Tests\Feature\Categories\Put)
+ [x] Success
+ [x] Error name text
+ [x] Error name empty
+
+Borrowed Book (Tests\Feature\Users\BorrowedBook)
+ [x] Success
+ [x] No borrowed book is no available
+ [x] Book no exists
+
+Delete (Tests\Feature\Users\Delete)
+ [x] Success
+ [x] User error
+
+Get Back Borrowed Book (Tests\Feature\Users\GetBackBorrowedBook)
+ [x] Success
+ [x] Book no exists
+
+Get (Tests\Feature\Users\Get)
+ [x] Success
+
+Post (Tests\Feature\Users\Post)
+ [x] Success
+ [x] Error name text
+ [x] Error email no valid
+ [x] Error email unique
+ [x] Error name empty
+ [x] Error email empty
+
+Put (Tests\Feature\Users\Put)
+ [x] Success
+ [x] Error name text
+ [x] Error email no valid
+ [x] Error email unique
+ [x] Error name empty
+ [x] Error email empty
+
+Show (Tests\Feature\Users\Show)
+ [x] Success
+
+Example Database
+ [x] Model find all
+ [x] Soft delete leaves row
+
+Example Session
+ [x] Session simple
+
+Health
+ [x] Is defined app path
+ [x] Base url has been set
+
