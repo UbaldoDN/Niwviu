@@ -17,10 +17,12 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 #codeigniter 3
 .env
+.env.example
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
+/writable/*
 
 ### CodeIgniter Patch ###
 
