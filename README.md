@@ -55,6 +55,9 @@ We need you to use any CSS preprocessor you feel comfortable with, and structure
 > composer install
 
 - **Ajustar el archivo .env con la configuración de la base de datos a utilizar**
+  
+## Correr migraciones
+> php spark migrate:refresh -f
 
 - **Iniciar servidor**
 > php spark serve
