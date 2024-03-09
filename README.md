@@ -63,4 +63,4 @@ We need you to use any CSS preprocessor you feel comfortable with, and structure
 > php spark serve
 
 - **Ir la navegador e ingresar la siguiente url*
-> http://localhost:8080 || > https://localhost
+http://localhost:8080 || https://localhost
