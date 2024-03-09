@@ -52,15 +52,26 @@ We need you to use any CSS preprocessor you feel comfortable with, and structure
 ## Good luck!
 
 ## Instalación
+
+- **Situate en la ubicación de tu equipo de computo donde quieres visualizar el proyecto y ejecuta el siguiente comando**
+> git clone https://github.com/UbaldoDN/Niwviu.git
+
+- **Cuando se termine de descargar el proyecto, ingresa a la carpeta de la siguiente manera**
+> cd niwviu
+
+- **La instalación se va a realizar por medio de composer con el siguiente comando**
 > composer install
 
-- **Ajustar el archivo .env con la configuración de la base de datos a utilizar**
+- **Utiliza el siguiente comando para crear una copia del archivo env**
+> mv env .env
+
+- **Ajustar el archivo .env con la configuración que se requiere descomentando lineas y llenado con información**
   
-## Correr migraciones
+- **Correr migraciones**
 > php spark migrate:refresh -f
 
 - **Iniciar servidor**
 > php spark serve
 
-- **Ir la navegador e ingresar la siguiente url*
+- **Ir la navegador e ingresar la siguiente url que muestra el servidor**
 http://localhost:8080 || https://localhost

@@ -201,9 +201,10 @@
         </form>
     </div>
 </div>
+<input type="hidden" id="baseUrl" name="baseUrl" value="<?php echo base_url(); ?>">
 
 <script>
-    const API_URL = 'https://niwviu.mx/api/v1';
+    const API_URL = document.getElementById('baseUrl').value + 'api/v1';
     document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('userBookForm');
         const messageDiv = document.getElementById('message');
