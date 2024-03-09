@@ -1,68 +1,63 @@
-# CodeIgniter 4 Application Starter
+## Objetivo
+## The Library
+A library is asking you to build a simple application using PHP Web Application or any combination of those two you prefer to manage their books. Here are the specifications:
 
-## What is CodeIgniter?
+## Book
+- **name*
+- **author*
+- **category*
+- **published date*
+- **user (person that borrowed a book)
+## Category
+- **name*
+- **description*
+## User
+- **name*
+- **email*
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+### Mandatory fields
+- **Be able to change the status from available to not available*
+- **Be able to know if a user borrowed a book or if it still available*
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+### Conditions/validations ● Book
+- **Should be at least in 1 category*
+- **Name, author: Valid values without numbers*
+### Category
+- **Name: Valid values without numbers*
+### User
+- **Name: Valid values without numbers*
+- **Email: Valid email*
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### Build a MessageSender class
+The goal with this Class is to simulate an integration with Whatsapp, Telegram or Facebook messenger to send a message when the book that the user wants is able to rent it. This class should be able to:
+- **Send message on status change from not available to available*
+- **The rest is up to you*
+- **The integration doesn’t require to be implemented, but you need to provide your side of the feature.*
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### What we need from you:
+All the functionality should be done in the backend using PHP 7 and CodeIgniter 3.
+In the end we will need you to share a git repository (Github or Bitbucket) with us, the repository should contain the finished code and instructions about how to run it. A Markdown readme or any TXT file is fine, just make sure to indicate clear instructions on how to deploy your code (the simpler the better).
 
-## Installation & updates
+You can use any visual theme you like and feel comfortable with (bootstrap, foundation, material design, etc). Use Postgres or MySQL. About the views Should be as simple as possible and expressive of what the pages are showing.
+- **CRUD views for Model (book, category and user)*
+- **The index should use pagination (5 per page) About the Styles and build process*
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+We need you to use any CSS preprocessor you feel comfortable with, and structure the styles in an ordered manner.
+###Bonus
+- **Host on Heroku*
+- **Any frontend framework*
+- **Test(unit, integration)*
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Hint, make it useful before than pretty.
+## Good luck!
 
-## Setup
+## Instalación
+> composer install
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- **Ajustar el archivo .env con la configuración de la base de datos a utilizar**
 
-## Important Change with index.php
+- **Iniciar servidor**
+> php spark serve
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- **Ir la navegador e ingresar la siguiente url*
+> http://localhost:8080 || > https://localhost
