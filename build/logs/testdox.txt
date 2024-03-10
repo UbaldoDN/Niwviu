@@ -10,18 +10,22 @@ Post (Tests\Feature\Books\Post)
  [x] Success
  [x] Error name text
  [x] Error author text
+ [x] Error published at
  [x] Error name empty
  [x] Error author empty
+ [x] Error published at empty
  [x] Error categories empty
  [x] Error categories min 1
  [x] Error categories no exist
 
 Put (Tests\Feature\Books\Put)
- [x] Success name author
+ [x] Success
  [x] Success categories
- [x] Error author text
+ [x] Error author
+ [x] Error published at
  [x] Error name empty
  [x] Error author empty
+ [x] Error published at empty
  [x] Error categories empty
  [x] Error categories min 1
  [x] Error categories no exist

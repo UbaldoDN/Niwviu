@@ -23,7 +23,7 @@ class CreateBooksTable extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => 150
             ],
-            'published_at datetime default current_timestamp',
+            'published_at datetime',
             'is_available' => [
                 'type'           => 'TINYINT',
                 'constraint'     => 1,

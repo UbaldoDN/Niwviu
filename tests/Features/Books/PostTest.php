@@ -36,6 +36,7 @@ class PostTest extends CIUnitTestCase
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book',
             'author' => 'Josefa Ortiz',
+            'publishedAt' => '2024-03-01 00:00:00',
             'categories' => [
                 $category1->id, $category2->id
             ]
@@ -46,6 +47,7 @@ class PostTest extends CIUnitTestCase
         $this->seeInDatabase('books',[
             'name' => 'Book',
             'author' => 'Josefa Ortiz',
+            'published_at' => '2024-03-01 00:00:00',
             'is_available' => 1
         ]);
 
@@ -70,6 +72,7 @@ class PostTest extends CIUnitTestCase
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book 1234',
             'author' => 'Josefa Ortiz',
+            'publishedAt' => '2024-03-01 00:00:00',
             'categories' => [
                 $category1->id, $category2->id
             ]
@@ -88,6 +91,26 @@ class PostTest extends CIUnitTestCase
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book',
             'author' => 'Josefa Ortiz 1234',
+            'publishedAt' => '2024-03-01 00:00:00',
+            'categories' => [
+                $category1->id, $category2->id
+            ]
+        ]);
+
+        $responseJsonDecode = json_decode($response->getJSON());
+        $this->assertEquals('El autor debe ser texto.', $responseJsonDecode->message->author);
+    }
+
+    public function test_error_published_at()
+    {
+        $fabricator = new Fabricator(CategoryFabricator::class);
+        $category1 = $fabricator->setOverrides(['name' => 'Horror'])->create();
+        $category2 = $fabricator->setOverrides(['name' => 'Fantasia'])->create();
+
+        $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
+            'name' => 'Book',
+            'author' => 'Josefa Ortiz 1234',
+            'publishedAt' => '01-03-2024 25:15:66',
             'categories' => [
                 $category1->id, $category2->id
             ]
@@ -105,6 +128,7 @@ class PostTest extends CIUnitTestCase
 
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'author' => 'Josefa Ortiz 1234',
+            'publishedAt' => '2024-03-01 00:00:00',
             'categories' => [
                 $category1->id, $category2->id
             ]
@@ -122,6 +146,7 @@ class PostTest extends CIUnitTestCase
 
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book',
+            'publishedAt' => '2024-03-01 00:00:00',
             'categories' => [
                 $category1->id, $category2->id
             ]
@@ -131,11 +156,30 @@ class PostTest extends CIUnitTestCase
         $this->assertEquals('El autor es obligatorio.', $responseJsonDecode->message->author);
     }
 
+    public function test_error_published_at_empty()
+    {
+        $fabricator = new Fabricator(CategoryFabricator::class);
+        $category1 = $fabricator->setOverrides(['name' => 'Horror'])->create();
+        $category2 = $fabricator->setOverrides(['name' => 'Fantasia'])->create();
+
+        $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
+            'name' => 'Book',
+            'author' => 'Josefa Ortiz',
+            'categories' => [
+                $category1->id, $category2->id
+            ]
+        ]);
+
+        $responseJsonDecode = json_decode($response->getJSON());
+        $this->assertEquals('El fecha de publicación es obligatorio.', $responseJsonDecode->message->publishedAt);
+    }
+
     public function test_error_categories_empty()
     {
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book',
-            'author' => 'Josefa Ortiz'
+            'author' => 'Josefa Ortiz',
+            'publishedAt' => '2024-03-01 00:00:00',
         ]);
 
         $responseJsonDecode = json_decode($response->getJSON());
@@ -147,6 +191,7 @@ class PostTest extends CIUnitTestCase
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book',
             'author' => 'Josefa Ortiz',
+            'publishedAt' => '2024-03-01 00:00:00',
             'categories' => []
         ]);
 
@@ -159,6 +204,7 @@ class PostTest extends CIUnitTestCase
         $response = $this->withHeaders(['Content-Type' => 'application/json'])->withBodyFormat('json')->post('/api/v1/books', [
             'name' => 'Book',
             'author' => 'Josefa Ortiz',
+            'publishedAt' => '2024-03-01 00:00:00',
             'categories' => [1]
         ]);
 

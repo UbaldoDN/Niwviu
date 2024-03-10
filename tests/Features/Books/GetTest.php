@@ -38,7 +38,7 @@ class GetTest extends CIUnitTestCase
         $fabricator = new Fabricator(BookFabricator::class);
         $book1 = $fabricator->setOverrides(['name' => 'Book 1'])->create();
         $book2 = $fabricator->setOverrides(['name' => 'Book 2', 'is_available' => 0])->create();
-        $book3 = $fabricator->setOverrides(['name' => 'Book 3'])->create();
+        $book3 = $fabricator->setOverrides(['name' => 'Book 3', 'published_at' => '2024-03-01 15:16:16'])->create();
 
         $fabricator = new Fabricator(CategoryBookFabricator::class);
         $fabricator->setOverrides(['category_id' => $category1->id, 'book_id' => $book1->id])->create();
@@ -50,7 +50,6 @@ class GetTest extends CIUnitTestCase
 
         $response = $this->get('/api/v1/books');
         $responseJsonDecode = json_decode($response->getJSON());
-        
         $this->assertEquals(2, count($responseJsonDecode));
         $this->assertEquals(2, count($responseJsonDecode[0]->categories));
         $this->assertEquals(2, count($responseJsonDecode[1]->categories));

@@ -166,6 +166,10 @@
             <input type="text" id="author" name="author">
         </div>
         <div class="form-group">
+            <label for="publishedAt">Fecha de Publicación:</label>
+            <input type="date" id="publishedAt" name="publishedAt">
+        </div>
+        <div class="form-group">
             <label for="categories">Categorías:</label>
             <select id="categories" name="categories" multiple>
                 <!-- Opciones de categorías se cargarán dinámicamente -->
@@ -195,6 +199,10 @@
                 <input type="text" id="editAuthor" name="author">
             </div>
             <div class="form-group">
+                <label for="editPublishedAt">Fecha de Publicación:</label>
+                <input type="date" id="editPublishedAt" name="editPublishedAt">
+            </div>
+            <div class="form-group">
                 <label for="editCategories">Categorías:</label>
                 <select id="editCategories" name="categories" multiple>
                     <!-- Opciones de categorías se cargarán dinámicamente -->
@@ -218,6 +226,7 @@
         const editNameInput = document.getElementById('editName');
         const editAuthorInput = document.getElementById('editAuthor');
         const editBookIdInput = document.getElementById('editBookId');
+        const editPublishedAtInput = document.getElementById('editPublishedAt');
         const editCategoriesSelect = document.getElementById('editCategories');
         const closeEditModalBtn = document.querySelector('#editModal .close');
 
@@ -246,6 +255,7 @@
             try {
                 const response = await fetch(`${API_URL}/books`);
                 const books = await response.json();
+
                 // Cargar categorías disponibles en el menú desplegable
                 const categories = await fetchCategories();
                 categoriesSelect.innerHTML = '';
@@ -300,15 +310,16 @@
 
             const name = document.getElementById('name').value;
             const author = document.getElementById('author').value;
+            const publishedAt = document.getElementById('publishedAt').value + ' 00:00:00';
             const categories = Array.from(document.getElementById('categories').selectedOptions).map(option => option.value);
-
+    
             try {
                 const response = await fetch(`${API_URL}/books`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ name, author, categories })
+                    body: JSON.stringify({ name, author, publishedAt, categories })
                 });
 
                 if (!response.ok) {
@@ -318,6 +329,7 @@
                 // Limpiar los campos del formulario después de una creación exitosa
                 document.getElementById('name').value = '';
                 document.getElementById('author').value = '';
+                document.getElementById('publishedAt').value = '';
                 document.getElementById('categories').selectedIndex = -1;
 
                 // Recargar la lista de libros
@@ -348,6 +360,7 @@
                     editBookIdInput.value = book.id;
                     editNameInput.value = book.name;
                     editAuthorInput.value = book.author;
+                    editPublishedAtInput.value = book.publishedAt;
 
                     // Cargar categorías disponibles en el menú desplegable
                     const categories = await fetchCategories();
@@ -400,6 +413,7 @@
             const id = editBookIdInput.value;
             const name = editNameInput.value;
             const author = editAuthorInput.value;
+            const publishedAt = editPublishedAtInput.value + ' 00:00:00';
             const categories = Array.from(editCategoriesSelect.selectedOptions).map(option => option.value);
 
             try {
@@ -408,7 +422,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ name, author, categories })
+                    body: JSON.stringify({ name, author, publishedAt, categories })
                 });
 
                 if (!response.ok) {

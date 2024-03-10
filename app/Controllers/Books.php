@@ -35,7 +35,7 @@ class Books extends BaseController
                 'id' => $book->id,
                 'name' => $book->name,
                 'author' => $book->author,
-                'publishedAt' => $book->published_at,
+                'publishedAt' => date("d-m-Y", strtotime($book->published_at)),
                 'categories' => $categoriesRelationship
             ];
         }
@@ -64,7 +64,7 @@ class Books extends BaseController
             'id' => $book->id,
             'name' => $book->name,
             'author' => $book->author,
-            'publishedAt' => $book->published_at,
+            'publishedAt' => date("d-m-Y", strtotime($book->published_at)),
             'categories' => $categoriesRelationship
         ];
 
@@ -89,6 +89,14 @@ class Books extends BaseController
                     'required' => 'El {field} es obligatorio.',
                     'regex_match' => 'El {field} debe ser texto.'
                 ],
+            ],
+            'publishedAt' => [
+                'label' => 'fecha de publicación',
+                'rules' => 'required|regex_match[/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) 00:00:00$/i]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'regex_match' => 'El {field} {value} debe ser una fecha valida.'
+                ],
             ]
         ];
         
@@ -112,6 +120,7 @@ class Books extends BaseController
         }
         
         $bookId = $this->book->insert(request()->getJson());
+        $this->book->update($bookId, ['published_at' => request()->getJson()->publishedAt]);
         $categoryBook = new CategoryBookModel();
         foreach (request()->getJson()->categories as $category) {
             $categoryBook->insert(['category_id' => $category, 'book_id' => $bookId]);
@@ -138,6 +147,14 @@ class Books extends BaseController
                     'required' => 'El {field} es obligatorio.',
                     'regex_match' => 'El {field} debe ser texto.'
                 ],
+            ],
+            'publishedAt' => [
+                'label' => 'fecha de publicación',
+                'rules' => 'required|regex_match[/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) 00:00:00$/i]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'regex_match' => 'El {field} {value} debe ser una fecha valida.'
+                ],
             ]
         ];
         
@@ -161,7 +178,7 @@ class Books extends BaseController
         }
         
         $this->book->update($id, request()->getJson());
-
+        $this->book->update($id, ['published_at' => request()->getJson()->publishedAt]);
         $categoryBook = new CategoryBookModel();
         $categoryBook->where('book_id', $id)->delete();
         foreach (request()->getJson()->categories as $category) {

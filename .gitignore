@@ -21,7 +21,8 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
-/writable/*
+writable/
+build/
 
 ### CodeIgniter Patch ###
 
@@ -226,7 +227,7 @@ nb-configuration.xml
 
 /results/
 /phpunit*.xml
-/.phpunit.*.cache
+.phpunit.*.cache
 
 /.php-cs-fixer.php
 

@@ -36,7 +36,7 @@ class DeleteTest extends CIUnitTestCase
         $category2 = $fabricator->setOverrides(['name' => 'Fantasia'])->create();
 
         $fabricator = new Fabricator(BookFabricator::class);
-        $book = $fabricator->setOverrides(['name' => 'Book', 'author' => 'JoseFa Ortiz'])->create();
+        $book = $fabricator->setOverrides(['name' => 'Book', 'author' => 'JoseFa Ortiz', 'published_at' => '2024-03-01 00:00:00'])->create();
 
         $fabricator = new Fabricator(CategoryBookFabricator::class);
         $fabricator->setOverrides(['category_id' => $category1->id, 'book_id' => $book->id])->create();
@@ -48,6 +48,7 @@ class DeleteTest extends CIUnitTestCase
         $this->dontSeeInDatabase('books',[
             'name' => 'Book',
             'author' => 'JoseFa Ortiz',
+            'published_at' => '2024-03-01 00:00:00',
             'deleted_at' => null
         ]);
     }
