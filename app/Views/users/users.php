@@ -146,10 +146,10 @@
 <header>
     <nav>
         <ul>
-            <li><a href="https://niwviu.mx/categories">Categorías</a></li>
-            <li><a href="https://niwviu.mx/books">Libros</a></li>
-            <li><a href="https://niwviu.mx/users">Usuarios</a></li>
-            <li><a href="https://niwviu.mx/borrowedBook">Prestamos de Libros</a></li>
+            <li><a id="hrefCategories">Categorías</a></li>
+            <li><a id="hrefBooks">Libros</a></li>
+            <li><a id="hrefUsers">Usuarios</a></li>
+            <li><a id="hrefBorrowedBooks">Prestamos de Libros</a></li>
         </ul>
     </nav>
 </header>
@@ -195,8 +195,19 @@
 <input type="hidden" id="baseUrl" name="baseUrl" value="<?php echo base_url(); ?>">
 
 <script>
-    const API_URL = document.getElementById('baseUrl').value + 'api/v1';
     document.addEventListener('DOMContentLoaded', () => {
+        const url = document.getElementById('baseUrl').value;
+        const API_URL = `${url}api/v1`;
+
+        let books = document.getElementById('hrefBooks');
+        let categories = document.getElementById('hrefCategories');
+        let users = document.getElementById('hrefUsers');
+        let borrowedBooks = document.getElementById('hrefBorrowedBooks');
+        books.href = `${url}books`;
+        categories.href = `${url}categories`;
+        users.href = `${url}users`;
+        borrowedBooks.href = `${url}borrowedBook`;
+        
         const form = document.getElementById('userForm');
         const messageDiv = document.getElementById('message');
         const messageModal = document.getElementById('messageModal');
